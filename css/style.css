@@ -5,8 +5,98 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: roboto;
+}
+body {
+    scroll-behavior: smooth;
 }
 
+/* TOGGLER */
+.toggler {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    border: none !important;
+}
+.toggler:focus {
+    border: none !important;
+    outline: none;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+}
+.toggler span {
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background: cornflowerblue;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.toggler span:nth-child(1) {
+    transform: translateY(-10px);
+    width: 15px;
+    left: 10px;
+}
+.toggler.active span:nth-child(1) {
+    width: 20px;
+    transform: translateY(0px) rotate(45deg);
+    transition-delay: 0.125s;
+}
+.toggler span:nth-child(2) {
+    transform: translateY(10px);
+    width: 10px;
+    left: 10px;
+}
+.toggler.active span:nth-child(2) {
+    width: 20px;
+    transform: translateY(0px) rotate(315deg);
+    transition-delay: 0.25s;
+}
+.toggler.active span:nth-child(3) {
+    transform: translateX(60px);
+}
+/* FLOATING BUTTON */
+.floating-container {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    margin: 35px 10px;
+}
+.floating-container:hover {
+    height: 200px;
+}
+.floating-container:hover .floating-button {
+    box-shadow: 0 10px 25px cornflowerblue;
+    transform: translateY(5px);
+    transition: all 0.3s;
+}
+.floating-button {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: cornflowerblue;
+    bottom: 0;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 65px;
+    color: white;
+    font-size: 23px;
+    z-index: 100;
+    cursor: pointer;
+    box-shadow: 0 10px 25px -5px cornflowerblue;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
 /* HOME */
 .hero-home {
     background: linear-gradient(hsla(0, 0%, 26%, 0.25), hsla(0, 0%, 13%, 0.25)),
@@ -26,6 +116,9 @@
 .feature {
     background: #e6e6e6;
 }
+.icon-container {
+    background: rgb(230, 230, 230);
+}
 /* ABOUT */
 .hero-about {
     background: linear-gradient(hsla(0, 0%, 26%, 0.25), hsla(0, 0%, 13%, 0.25)),
@@ -36,24 +129,32 @@
     object-fit: cover;
     background-position: bottom !important;
 }
+.about {
+    width: 50%;
+}
 .menu-icon {
     font-size: 3rem;
 }
-/* LOGIN */
-.login-section {
+.person-icon {
+    height: auto;
+    width: 50px !important;
+}
+/* CONTACT */
+.contact-left {
     width: 50%;
 }
+.contact-right {
+    width: 50%;
+}
+/* FORMS */
 .red {
     color: red;
 }
-.roboto {
-    font-family: roboto;
-}
 .button-bg {
-    background: #1363df;
+    background: #323232;
 }
 .button-bg:hover {
-    background: #1363df;
+    background: #222222;
 }
 .form-control {
     outline: none;
@@ -64,6 +165,7 @@
     box-shadow: none;
     border: 1px solid #000;
 }
+/* FOOTER */
 .footer {
     background: linear-gradient(hsla(0, 0%, 90%, 25%), hsla(0, 0%, 30%, 75%)),
         url(../assets/img/drinks.jpg);
@@ -80,17 +182,32 @@
 }
 
 @media only screen and (max-width: 600px) {
+    /* HOME */
     .icon {
         font-size: 2rem !important;
+    }
+    /* ABOUT */
+    .about {
+        width: 100%;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    /* ABOUT */
+    .person-icon {
+        height: auto;
+        width: 50px !important;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    /* ABOUT */
+    .person-icon {
+        height: auto;
+        width: 50px !important;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

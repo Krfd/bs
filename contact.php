@@ -19,39 +19,37 @@ $contactToken = hash_hmac('sha256', 'this is for contact', $contactKey);
 <body>
     <?php include("layout/navbar.php") ?>
     <div class="container-fluid py-5 my-5">
-        <div class="container d-block d-md-flex justify-content-evenly align-items-center">
-            <div class="w-50">
+        <div class="container d-block d-lg-flex justify-content-evenly align-items-center">
+            <div class="contact-left">
                 <h1 class="fw-bold display-2">Let's get in touch!</h1>
                 <p>For more information just fill out the form below.</p>
-                <form method="post" id="contact">
+                <form method="post" id="contact" class="w-100">
                     <input type="hidden" name="csrfToken" value="<?php echo $contactToken; ?>" />
                     <input type="hidden" name="key" value="<?php echo $contactKey; ?>" />
-                    <div class="form-floating">
-                        <input type="text" name="name" id="name" class="form-control rounded-0" placeholder="Name" required />
-                        <label for="name">Name</label>
-                    </div>
-                    <div class="form-floating mt-3">
-                        <input type="email" name="email" id="email" class="form-control rounded-0" placeholder="Email" required />
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="form-floating mt-3">
-                        <input type="text" name="phone" id="phone" class="form-control rounded-0" placeholder="Phone" required />
-                        <label for="phone">Phone</label>
+                    <div>
+                        <div class="form-floating">
+                            <input type="text" name="name" id="name" class="form-control rounded-0" placeholder="Name" required />
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="tel" name="phone" id="phone" class="form-control rounded-0" placeholder="Phone" required />
+                            <label for="phone">Phone</label>
+                        </div>
+                        <div class="form-floating mt-3">
+                            <input type="email" name="email" id="email" class="form-control rounded-0" placeholder="Email" required />
+                            <label for="email">Email</label>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-dark rounded-0 mt-3 w-100">
                         Submit
                     </button>
                 </form>
             </div>
-            <div class="w-50 px-5">
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Consectetur distinctio natus voluptatum quasi quo
-                    nesciunt quas minima, a, facilis omnis debitis aliquam
-                    laboriosam, repellendus optio!
-                </p>
+            <div class="contact-right px-5">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex fugiat, dicta facere quaerat laboriosam tempore deserunt quia cum modi quas doloribus vel ullam laudantium obcaecati quam nesciunt voluptatibus, et rerum? Minima, eaque. Totam quisquam deleniti laboriosam tempore expedita. Ut dignissimos distinctio provident quae labore expedita veniam repellendus animi molestias. Quo?</p>
             </div>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5544.426471895551!2d122.563479342513!3d10.695743714818656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1714572587981!5m2!1sen!2sph" width="600" height="450" style="border:0; width: 100%" allowfullscreen="" class="p-5 d-block mx-auto" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <?php include("layout/footer.php") ?>
 </body>

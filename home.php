@@ -62,29 +62,7 @@
             </div>
         </div>
     </div>
-    <img src="./assets/img/cinnamon.jpg" alt="Image Fluid" class="w-100 object-fit-cover" style="height: 300px" />
-    <div class="container-fluid py-5">
-        <div class="container d-block d-lg-flex justify-content-center align-items-center my-5">
-            <div class="box p-5 text-center">
-                <h2>Our Chefs</h2>
-                <p>
-                    Discover the best tasting dishes from our experienced
-                    chef's. These professional people showcased their
-                    passion and talent in the foods in business industry for
-                    several years. Their goal is not just only to satisfy
-                    customers but also to provide you with the best quality
-                    dishes here in Iloilo.
-                </p>
-                <button class="btn btn-sm rounded-0 border-3 border-secondary">
-                    Learn More
-                </button>
-            </div>
-            <div class="box p-3 p-md-5">
-                <img src="./assets/img/cater.jpg" alt="Cater" class="shadow-sm" style="width: 100%" />
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-secondary py-5">
+    <div class="container-fluid icon-container py-5">
         <div class="container d-flex justify-content-evenly align-items-center">
             <div class="box text-center">
                 <i class="fa-solid fa-heart icon"></i>
@@ -108,7 +86,30 @@
             </div>
         </div>
     </div>
+    <img src="./assets/img/cinnamon.jpg" alt="Image Fluid" class="w-100 object-fit-cover" style="height: 300px" />
+    <div class="container-fluid py-5">
+        <div class="container d-block d-lg-flex justify-content-center align-items-center my-5">
+            <div class="box p-5 text-center">
+                <h2>Our Chefs</h2>
+                <p>
+                    Discover the best tasting dishes from our experienced
+                    chef's. These professional people showcased their
+                    passion and talent in the foods in business industry for
+                    several years. Their goal is not just only to satisfy
+                    customers but also to provide you with the best quality
+                    dishes here in Iloilo.
+                </p>
+                <button class="btn btn-sm rounded-0 border-3 border-secondary">
+                    Learn More
+                </button>
+            </div>
+            <div class="box p-3 p-md-5">
+                <img src="./assets/img/cater.jpg" alt="Cater" class="shadow-sm" style="width: 100%" />
+            </div>
+        </div>
+    </div>
     <?php include("layout/footer.php") ?>
+
 </body>
 
 </html>
